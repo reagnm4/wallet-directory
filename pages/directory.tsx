@@ -5,6 +5,14 @@ import { useRouter } from 'next/router';
 import { fetchDirectoryData } from '@/lib/fetchDirectory';
 import DirectoryCard from '@/components/DirectoryCard';
 
+type Member = {
+  name: string;
+  city: string;
+  occupation: string;
+  x_account: string;
+  linkedin_url: string;
+};
+
 export default function DirectoryPage() {
   const { isConnected } = useAccount();
   const router = useRouter();
