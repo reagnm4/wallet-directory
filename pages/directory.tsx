@@ -8,7 +8,7 @@ import DirectoryCard from '@/components/DirectoryCard';
 export default function DirectoryPage() {
   const { isConnected } = useAccount();
   const router = useRouter();
-  const [members, setMembers] = useState<any[]>([]);
+  const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
     if (!isConnected) {
