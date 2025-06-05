@@ -13,13 +13,14 @@ import {
   createConfig,
   http,
 } from 'wagmi';
+
 import { mainnet } from 'wagmi/chains';
+
+const chains = [mainnet] as const;
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
-
-const chains = [mainnet];
 
 const { connectors } = getDefaultWallets({
   appName: 'Wallet Directory',
